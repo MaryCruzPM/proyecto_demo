@@ -2,11 +2,11 @@
 {
     'name': "partida odoo11 ventas",
 
-    'summary': """Ejercicios
+    'summary': """Numero de partida
     """,
 
     'description': """
-        Modulos para ventas 
+        Modulo para ventas de partida automaticamente
     """,
 
     'author': "Soluciones4G",
@@ -20,18 +20,19 @@
     # any module necessary for this one to work correctly
     'depends': [
         'base',
-        'purchase',
         'sale',
         'sale_management',
-        'contacts',
-        'stock',
+        'venta_cotizacion',
+        ],
 
-    ],
+ #       'purchase',       
+ #       'contacts',
+ #       'stock',
+  
 
     # always loaded
 	'data': [
-	'views/ventas_partida.xml',
-       
+    
     ],
 	'demo':[
 

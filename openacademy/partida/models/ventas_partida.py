@@ -15,7 +15,7 @@ class ventas_heredadop(models.Model):
 		new_id = super(ventas_heredadop, self).create(vals)
 		print("creando los valore del sale order y pasandolo a new_id")
 		for line in new_id.order_line: #se itera con el campo que esta relacionado que es order line, en este caso es porque este campo esta relacionado sale.order con sale,order.line
-			line.partida=value 			
+			line.x_num_partida=value 			
 			print("valor de value cambiante")
 			print(+value)			
 			value=value+1
@@ -27,7 +27,7 @@ class ventas_heredadop(models.Model):
 		value=1
 		ac=super(ventas_heredadop,self).write(vals) #el metodo write regresa un boolean que indica un true o un false si fue cambiado el campo
 		for record in self.order_line:
-			record.partida = value
+			record.x_num_partida = value
 			value=value+1		
 		return ac
 
